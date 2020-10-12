@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/react-redux-signup-signin/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/react-redux-signup-signin/static/js/main.52a5818c.chunk.js",
-    "main.js.map": "/react-redux-signup-signin/static/js/main.52a5818c.chunk.js.map",
+    "main.js": "/react-redux-signup-signin/static/js/main.d9693b3d.chunk.js",
+    "main.js.map": "/react-redux-signup-signin/static/js/main.d9693b3d.chunk.js.map",
     "runtime-main.js": "/react-redux-signup-signin/static/js/runtime-main.3fcdaf7c.js",
     "runtime-main.js.map": "/react-redux-signup-signin/static/js/runtime-main.3fcdaf7c.js.map",
     "static/js/2.7e08019d.chunk.js": "/react-redux-signup-signin/static/js/2.7e08019d.chunk.js",
     "static/js/2.7e08019d.chunk.js.map": "/react-redux-signup-signin/static/js/2.7e08019d.chunk.js.map",
     "index.html": "/react-redux-signup-signin/index.html",
-    "precache-manifest.06072a1d92e4417eaed806292b62fe1f.js": "/react-redux-signup-signin/precache-manifest.06072a1d92e4417eaed806292b62fe1f.js",
+    "precache-manifest.b55fb4ee8df5f1bd7a5117e297768dbf.js": "/react-redux-signup-signin/precache-manifest.b55fb4ee8df5f1bd7a5117e297768dbf.js",
     "service-worker.js": "/react-redux-signup-signin/service-worker.js",
     "static/css/main.5ecd60fb.chunk.css.map": "/react-redux-signup-signin/static/css/main.5ecd60fb.chunk.css.map",
     "static/js/2.7e08019d.chunk.js.LICENSE.txt": "/react-redux-signup-signin/static/js/2.7e08019d.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.3fcdaf7c.js",
     "static/js/2.7e08019d.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.52a5818c.chunk.js"
+    "static/js/main.d9693b3d.chunk.js"
   ]
 }
