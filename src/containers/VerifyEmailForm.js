@@ -38,6 +38,7 @@ const VerifyEmailForm = props => {
     }
 
     const validateVerificationCode = (e) => {
+
         dispatch(verifyEmail(email, token.toString(), verificationToken))
             .then(() =>{
                 history.push('/signUp');
