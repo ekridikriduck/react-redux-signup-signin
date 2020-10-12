@@ -12,11 +12,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `npm run build`
 
 Builds the app for production to the `build` folder.<br />
@@ -24,8 +19,6 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ### `npm run eject`
 
@@ -37,3 +30,24 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+### `GIT Deployment`
+
+1) Upload the source code to the git hub repo 
+2) Install gh-pages as dev dependency - npm install --save-dev gh-pages
+3) To the package.json file add the homepage for you app "https://{gitusername}.github.io/repo-name/"
+
+4) Add deploy and predeploy scripts to package.json <br />
+`"predeploy": "npm run build",`
+`"deploy": "gh-pages -d build",`
+
+5) Remember to add `basename` to the router `basename = {/repo-name}`
+6) Run `npm run deploy`
+
+And you are done !!!
+
+
+### `Extra Dependencies`
+1) `Material-UI` -  Create beautiful responsive UI's using googles material design `npm install @material-ui/core`
+2) `npm install @material-ui/icons` - Material UI icons library
+3) `npm install @material-ui/styles` - Material UI theming library
+2) `validator`  - Utility for validating different fields `npm install validator`
