@@ -23,7 +23,7 @@ export const verifyPhoneNumber = (phoneNumber) => (dispatch) => {
 }
 
 export const verifyOTP = (phoneNumber, verificationCode, token) => (dispatch) => {
-    if(verificationCode !== 4){
+    if(verificationCode.length !== 4){
         dispatch({
             type: 'SET_MESSAGE',
             payload: 'OTP should be 4 characters long.'
