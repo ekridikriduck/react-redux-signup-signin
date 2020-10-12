@@ -49,7 +49,7 @@ const OTPForm = props => {
             console.log(err);
         })
     }
-    let isDisabled = isEmpty(verificationCode) || verificationCode.length < 4;
+    let isDisabled = isEmpty(verificationCode);
     return (
         <form className={classes.form} noValidate>
             <TextField

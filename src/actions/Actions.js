@@ -1,6 +1,8 @@
 import Services from "../services/Services";
 import isEmail from "validator/es/lib/isEmail";
 
+//TODO display verification code length error messages from server message.
+
 export const verifyPhoneNumber = (phoneNumber) => (dispatch) => {
     return Services.verifyPhoneNumber(phoneNumber).then(({results, message})=> {
         if(!results) {return Promise.reject(message);}
@@ -21,6 +23,13 @@ export const verifyPhoneNumber = (phoneNumber) => (dispatch) => {
 }
 
 export const verifyOTP = (phoneNumber, verificationCode, token) => (dispatch) => {
+    if(verificationCode !== 4){
+        dispatch({
+            type: 'SET_MESSAGE',
+            payload: 'OTP should be 4 characters long.'
+        })
+        return Promise.reject()
+    }
     return Services.verifyOTP(phoneNumber, verificationCode, token).then(({results, message, messageObj}) => {
         if(!results) {
             dispatch({
