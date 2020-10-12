@@ -4,7 +4,6 @@ import Button from "@material-ui/core/Button";
 import Link from '@material-ui/core/Link';
 import {makeStyles} from "@material-ui/core/styles";
 import {useSelector, useDispatch} from "react-redux";
-
 import {Redirect} from 'react-router-dom';
 import {verifyOTP, resendOTP} from "../actions/Actions";
 import isEmpty from "validator/es/lib/isEmpty";

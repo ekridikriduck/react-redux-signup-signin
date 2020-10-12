@@ -1,4 +1,5 @@
 import Services from "../services/Services";
+import isEmail from "validator/es/lib/isEmail";
 
 export const verifyPhoneNumber = (phoneNumber) => (dispatch) => {
     return Services.verifyPhoneNumber(phoneNumber).then(({results, message})=> {
@@ -63,6 +64,13 @@ export const verifyOTP = (phoneNumber, verificationCode, token) => (dispatch) =>
 }
 
 export const requestEmailVerification = (email, token, phoneNumber) => dispatch => {
+    if(!isEmail(email)){
+        dispatch({
+            type: 'SET_MESSAGE',
+            payload: 'Please enter a valid Email Address'
+        })
+        return Promise.reject();
+    }
     return Services.requestEmailVerification(email, token, phoneNumber).then((payload) =>{
         let {results, message} = payload;
         if(!results) {return Promise.reject(message);}
@@ -108,6 +116,13 @@ export const verifyEmail = (email, token, verificationToken) => dispatch => {
 }
 
 export const signUp = (firstName, lastName, email, phoneNumber, referredCodeKey, agreeToPrivacyPolicy, token) => dispatch => {
+    if(referredCodeKey.length && referredCodeKey.length < 6){
+        dispatch({
+            type: 'SET_MESSAGE',
+            payload: 'Referral code should be 6 characters long'
+        })
+        return Promise.reject();
+    }
     return Services.signUp(firstName, lastName, email, phoneNumber, referredCodeKey, agreeToPrivacyPolicy, token)
         .then((payload) => {
             let {results, message} = payload;
