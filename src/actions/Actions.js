@@ -154,6 +154,12 @@ export const logoutUser = (userID, token) => dispatch => {
         dispatch({
             type: 'LOGOUT_USER'
         })
+        dispatch({
+            type: 'CLEAR_AUTH'
+        })
+        dispatch({
+            type: 'CLEAR_MESSAGE'
+        })
         localStorage.clear()
         return Promise.resolve();
     })
