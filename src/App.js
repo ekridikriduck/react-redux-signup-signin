@@ -7,7 +7,7 @@ import theme from "./theme";
 export default function App() {
     return (
         <ThemeProvider theme={theme}>
-        <Router basename= '/react-redux-signup-signin'>
+        <Router>
             <Routes/>
         </Router>
         </ThemeProvider>

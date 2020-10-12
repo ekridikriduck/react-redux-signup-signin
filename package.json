@@ -1,7 +1,6 @@
 {
   "name": "react-redux-signup-signin",
   "version": "0.1.0",
-  "homepage": "https://ekridikriduck.github.io/react-redux-signup-signin/",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.0",

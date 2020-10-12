@@ -30,21 +30,6 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-### `GIT Deployment`
-
-1) Upload the source code to the git hub repo 
-2) Install gh-pages as dev dependency - npm install --save-dev gh-pages
-3) To the package.json file add the homepage for you app "https://{gitusername}.github.io/repo-name/"
-
-4) Add deploy and predeploy scripts to package.json <br />
-`"predeploy": "npm run build",`
-`"deploy": "gh-pages -d build",`
-
-5) Remember to add `basename` to the router `basename = {/repo-name}`
-6) Run `npm run deploy`
-
-And you are done !!!
-
 
 ### `Extra Dependencies`
 1) `Material-UI` -  Create beautiful responsive UI's using googles material design `npm install @material-ui/core`
